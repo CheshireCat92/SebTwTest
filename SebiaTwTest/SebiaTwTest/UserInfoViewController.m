@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [UserImage setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:tweet.tweetAuthorDetails.profile_image] ] ] ];
+    [UserImage setImage:[UIImage imageWithData:tweet.tweetAuthorDetails.profile_image] ];
     [UserName setText:tweet.tweetAuthorDetails.name];
     [UserFolowers setText:tweet.tweetAuthorDetails.followers];
 }
