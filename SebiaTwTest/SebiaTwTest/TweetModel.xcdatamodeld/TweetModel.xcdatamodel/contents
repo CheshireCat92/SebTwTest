@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Tweet" representedClassName="Tweet" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tweetAuthorDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TweetAuthorDetails" inverseName="tweet" inverseEntity="TweetAuthorDetails" syncable="YES"/>
+    </entity>
+    <entity name="TweetAuthorDetails" representedClassName="TweetAuthorDetails" syncable="YES">
+        <attribute name="followers" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profile_image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <relationship name="tweet" maxCount="1" deletionRule="Nullify" destinationEntity="Tweet" inverseName="tweetAuthorDetails" inverseEntity="Tweet" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Tweet" positionX="-117" positionY="63" width="128" height="105"/>
+        <element name="TweetAuthorDetails" positionX="-452" positionY="9" width="128" height="105"/>
+    </elements>
+</model>
